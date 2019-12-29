@@ -18,6 +18,7 @@ const config: Configuration = {
   },
   loading: { color: '#fff' },
   typescript: { typeCheck: { eslint: true } },
+  plugins: ['@/plugins/storage'],
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/eslint-module',
