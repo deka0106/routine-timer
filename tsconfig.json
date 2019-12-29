@@ -15,7 +15,13 @@
     "paths": {
       "@/*": ["./*"]
     },
-    "types": ["@types/node", "@types/jest", "@nuxt/types", "@nuxtjs/vuetify"]
+    "types": [
+      "@types/node",
+      "@types/jest",
+      "@nuxt/types",
+      "@nuxtjs/vuetify",
+      "./types"
+    ]
   },
   "exclude": ["node_modules"]
 }
