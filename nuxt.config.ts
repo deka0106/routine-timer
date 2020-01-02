@@ -19,12 +19,16 @@ const config: Configuration = {
   loading: { color: '#fff' },
   typescript: { typeCheck: { eslint: true } },
   plugins: ['@/plugins/storage'],
+  build: {
+    transpile: [/typed-vuex/]
+  },
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/eslint-module',
     '@nuxtjs/stylelint-module',
     '@nuxtjs/vuetify',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
+    'nuxt-typed-vuex'
   ],
   modules: ['@nuxtjs/pwa', '@nuxtjs/dotenv'],
   vuetify: {
