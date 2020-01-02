@@ -3,8 +3,7 @@ import { Configuration } from '@nuxt/types'
 const config: Configuration = {
   mode: 'spa',
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    title: 'ルーチンタイマー',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -32,7 +31,7 @@ const config: Configuration = {
   ],
   modules: ['@nuxtjs/pwa', '@nuxtjs/dotenv'],
   vuetify: {
-    customVariables: ['~/assets/scss/variables.scss'],
+    customVariables: ['@/assets/scss/variables.scss'],
     defaultAssets: {
       font: {
         family: 'M PLUS Rounded 1c'
@@ -40,7 +39,11 @@ const config: Configuration = {
       icons: 'fa'
     },
     theme: {
-      themes: {}
+      themes: {
+        light: {
+          primary: '#3377FF'
+        }
+      }
     },
     treeShake: true
   }
