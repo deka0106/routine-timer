@@ -5,14 +5,17 @@ module.exports = {
   },
   moduleFileExtensions: ['js', 'ts', 'vue', 'json'],
   transform: {
-    '^.+\\.ts$': 'babel-jest',
+    '^.+\\.tsx?$': 'ts-jest',
     '.*\\.(vue)$': 'vue-jest'
   },
+  transformIgnorePatterns: ['/node_modules/(?!(nuxt-typed-vuex|typed-vuex)/)'],
   collectCoverage: true,
   collectCoverageFrom: [
     '<rootDir>/components/**/*.vue',
-    '<rootDir>/pages/**/*.vue'
+    '<rootDir>/pages/**/*.vue',
+    '<rootDir>/store/**/*.ts'
   ],
   setupFiles: ['<rootDir>/test/setup.ts'],
-  preset: 'ts-jest'
+  preset: 'ts-jest/presets/js-with-ts',
+  verbose: true
 }
