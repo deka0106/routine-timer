@@ -1,3 +1,4 @@
+import Vue from 'vue'
 import {
   getAccessorType,
   getterTree,
@@ -26,7 +27,7 @@ export const mutations = mutationTree(state, {
     state,
     { index, routine }: { index: number; routine: Routine }
   ) => {
-    state.routines[index] = routine
+    Vue.set(state.routines, index, routine)
   }
 })
 
