@@ -6,6 +6,6 @@ declare module 'routine-timer' {
 
   interface Task {
     title: string
-    time: number
+    time: string
   }
 }

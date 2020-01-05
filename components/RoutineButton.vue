@@ -1,5 +1,5 @@
 <template>
-  <v-card :elevation="0" @click.prevent="openDialog">
+  <v-card :elevation="0" @click.prevent="onClick">
     <v-row align="center" justify="space-around">
       <v-col>
         <div class="pl-4">
@@ -25,16 +25,15 @@ export default class RoutineButton extends Vue {
   @Prop({ default: 0 })
   index!: number
 
+  @Prop({ required: true })
+  onClick!: (e: Event) => void
+
   get routine() {
     return this.routines[this.index]
   }
 
   get routines() {
     return this.$accessor.routines
-  }
-
-  openDialog() {
-    console.log(`open dialog ${this.routine.title}`)
   }
 
   startRoutine() {

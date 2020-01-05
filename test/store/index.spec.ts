@@ -8,7 +8,7 @@ describe('$store', () => {
     }
     const routine: Routine = {
       title: 'routine',
-      tasks: [{ title: 'task', time: 360000 }]
+      tasks: [{ title: 'task', time: '08:10' }]
     }
     mutations.addRoutine(mock, routine)
     expect<Routine[]>(mock.routines).toEqual([routine])
@@ -17,7 +17,7 @@ describe('$store', () => {
   test('delete routine', () => {
     const routine: Routine = {
       title: 'routine',
-      tasks: [{ title: 'task', time: 360000 }]
+      tasks: [{ title: 'task', time: '08:10' }]
     }
     const mock: ReturnType<typeof state> = {
       routines: [
@@ -48,7 +48,7 @@ describe('$store', () => {
     }
     const routine: Routine = {
       title: 'routine',
-      tasks: [{ title: 'task', time: 360000 }]
+      tasks: [{ title: 'task', time: '08:10' }]
     }
     mutations.updateRoutine(mock, { index: 0, routine })
     expect<Routine>(mock.routines[0]).toEqual(routine)
