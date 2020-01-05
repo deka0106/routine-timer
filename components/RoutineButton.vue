@@ -8,7 +8,7 @@
       </v-col>
       <v-col cols="auto" class="py-1">
         <div class="pr-2">
-          <v-btn icon large color="primary" @click.stop.prevent="startRoutine">
+          <v-btn icon large color="primary" :to="`/timer/${index}`">
             <v-icon large>fa-play-circle</v-icon>
           </v-btn>
         </div>
@@ -34,10 +34,6 @@ export default class RoutineButton extends Vue {
 
   get routines() {
     return this.$accessor.routines
-  }
-
-  startRoutine() {
-    console.log(`start routine ${this.routine.title}`)
   }
 }
 </script>
