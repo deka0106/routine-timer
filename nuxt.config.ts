@@ -17,7 +17,7 @@ const config: Configuration = {
   },
   loading: { color: '#fff' },
   typescript: { typeCheck: { eslint: true } },
-  // plugins: ['@/plugins/storage'],
+  plugins: ['@/plugins/storage'],
   build: {
     transpile: [/typed-vuex/]
   },
