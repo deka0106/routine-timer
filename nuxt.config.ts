@@ -46,6 +46,10 @@ const config: Configuration = {
       }
     },
     treeShake: true
+  },
+  manifest: {
+    name: 'ルーチンタイマー',
+    lang: 'ja'
   }
 }
 
